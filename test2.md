@@ -1,6 +1,6 @@
 ```uml
 @startuml
-Alice --> Bob: Authentication Request
+Alice -> Bob -> 厨房: Authentication Request
 Bob --> Alice: Authentication Response
 
 
