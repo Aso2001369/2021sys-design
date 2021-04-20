@@ -11,6 +11,7 @@ elseif(weather=2)then(true)
 else(false)
 :不明です;
 
+endif
 end
 @enduml
 ```
