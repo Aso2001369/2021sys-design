@@ -10,6 +10,7 @@ elseif(weather=2)then(true)
 :雨です;
 else(false)
 :不明です;
+
 end
 @enduml
 ```
