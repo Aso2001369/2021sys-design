@@ -11,5 +11,7 @@ else(false)
 :昭和の街かパーキングエリアで
 弁当を買って田染荘で食べる;
 endif
+
+end
 @enduml
 ```
