@@ -7,7 +7,7 @@ start
 :昭和の街へ;
 if(昼飯どうする？)then(パターン1)
 :昭和の街で店に入る;
-elseif then(パターン2)
+elseifthen(パターン2)
 :曇りです;
 else(false)then(パターン3)
 :昭和の街かパーキングエリアで
