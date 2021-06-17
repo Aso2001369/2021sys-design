@@ -7,9 +7,7 @@ start
 :昭和の街へ;
 if(昼飯どうする？)then(パターン1)
 :昭和の街で店に入る;
-elseifthen(パターン2)
-:曇りです;
-else(false)then(パターン3)
+else(false)then(パターン2)
 :昭和の街かパーキングエリアで
 弁当を買って田染荘で食べる;
 endif
