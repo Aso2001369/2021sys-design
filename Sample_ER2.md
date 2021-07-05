@@ -71,9 +71,10 @@ package "ECサイト" as target_system {
         reg_date
     }
     
-    m_customers       |o-ri-o{     d_purchase
+    m_customers |o-ri-o{ d_purchase
     d_purchase ||-ri-|{ d_purchase_detail
     d_purchase_detail }-do-|| m_items
+    m_items |o-ri-o{ m_category
     
 @enduml
 ```
