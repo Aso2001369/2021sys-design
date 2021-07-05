@@ -27,7 +27,7 @@ package "ECサイト" as target_system {
       １文字なら "主" とか "従" まど日本語でも記載可能
      '/
 
-    entity "顧客マスタ" as customer <m_customers> <<M,MASTER_MARK_COLOR>> {
+    entity "顧客マスタ" as m_customers <m_customers> <<M,MASTER_MARK_COLOR>> {
         + customer_code [PK]
         --
         pass
@@ -39,7 +39,7 @@ package "ECサイト" as target_system {
         reg_date
     }
     
-    entity "購入テーブル" as purchase <d_purchase> <<M,MASTER_MARK_COLOR>> {
+    entity "購入テーブル" as d_purchase <d_purchase> <<M,MASTER_MARK_COLOR>> {
         + order_id [PK]
         --
         customer_code
@@ -47,13 +47,20 @@ package "ECサイト" as target_system {
         total_price
     }
     
-     entity "購入詳細テーブル" as purchase_detail <d_purchase_detail> <<M,MASTER_MARK_COLOR>> {
-        + order_id [PK] [FK]
+     entity "購入詳細テーブル" as d_purchase_detail <d_purchase_detail> <<M,MASTER_MARK_COLOR>> {
+        + order_id [PK]
         + detail_id [PK]
         --
         item_code [FK]
         price
         num
+    }
+    
+    entity "カテゴリマスタ" as m_category <m_category> <<M,MASTER_MARK_COLOR>> {
+        + category_id [PK]
+        --
+        name
+        reg_date
     }
 @enduml
 ```
