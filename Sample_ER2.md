@@ -42,7 +42,7 @@ package "ECサイト" as target_system {
         + order_id [PK]
         + detail_id [PK]
         --
-        + item_code [FK]
+         item_code [FK]
         price
         num
     }
