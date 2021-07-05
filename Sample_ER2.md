@@ -105,8 +105,5 @@ order_detail    }-do-||      sku
 sku             }-le-||     product
 product        }o-le-||     vendor
 
-note bottom of customer : 別プロジェクト\nDB-Linkで参照する
-
-
 @enduml
 ```
