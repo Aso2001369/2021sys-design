@@ -24,17 +24,6 @@ skinparam class {
     ArrowColor Black
 }
 
-package "外部データベース" as ext <<Database>> {
-    entity "顧客マスタ" as customer <<M,MASTER_MARK_COLOR>> {
-        + 顧客ID [PK]
-        --
-        顧客名
-        郵便番号
-        住所
-        電話番号
-        FAX
-    }
-}
 
 package "開発対象システム" as target_system {
     /'
