@@ -71,5 +71,7 @@ package "ECサイト" as target_system {
         reg_date
     }
     
+    m_customer       |o-ri-o{     d_purchase
+    
 @enduml
 ```
