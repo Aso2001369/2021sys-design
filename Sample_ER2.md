@@ -73,6 +73,7 @@ package "ECサイト" as target_system {
     
     m_customers       |o-ri-o{     d_purchase
     d_purchase ||-ri-|{ d_purchase_detail
+    d_purchase_detail }-do-|| m_items
     
 @enduml
 ```
