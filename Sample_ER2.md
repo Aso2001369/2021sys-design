@@ -43,19 +43,18 @@ package "開発対象システム" as target_system {
       角丸四角形が描けない代替です。
       １文字なら "主" とか "従" とか日本語でも OK だったのが受ける。
      '/
-    entity "注文テーブル" as order <<主,TRANSACTION_MARK_COLOR>> MAIN_ENTITY {
-        + 注文ID [PK]
+    entity "顧客マスタ" as customer <m_customers> <<M,MASTER_MARK_COLOR>> {
+        + customer_code [PK]
         --
-        # 顧客ID [FK]
-        注文日時
-        配送希望日
-        配送方法
-        お届け先名
-        お届け先住所
-        決済方法
-        合計金額
-        消費税額
+        pass
+        name
+        address
+        tel
+        mail
+        del_flag
+        reg_date
     }
+
 
     entity "注文明細テーブル" as order_detail <<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY_2 {
         + 注文ID   [PK]
