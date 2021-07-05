@@ -1,5 +1,6 @@
+```startuml
 @startuml
-```
+
 
 package "外部データベース" as ext <<Database>> {
     entity "顧客マスタ" as customer <<M,MASTER_MARK_COLOR>> {
@@ -84,5 +85,6 @@ product        }o-le-||     vendor
 
 note bottom of customer : 別プロジェクト\nDB-Linkで参照する
 
-```
+
 @enduml
+```
