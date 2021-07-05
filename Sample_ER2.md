@@ -87,7 +87,6 @@ package "開発対象システム" as target_system {
     }
 }
 
-customer       |o-ri-o{     order
 order          ||-ri-|{     order_detail
 order_detail    }-do-||      sku
 sku             }-le-||     product
