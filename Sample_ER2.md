@@ -5,7 +5,6 @@
 !define MAIN_ENTITY #E2EFDA-C6E0B4
 !define MAIN_ENTITY_2 #FCE4D6-F8CBAD
 
-/' 他の色も、用途が分りやすいように名前をつけます。 '/
 !define METAL #F2F2F2-D9D9D9
 !define MASTER_MARK_COLOR AAFFAA
 !define TRANSACTION_MARK_COLOR FFAA00
@@ -18,10 +17,6 @@ skinparam class {
 
 
 package "ECサイト" as target_system {
-    /'
-      マスターテーブルを M、トランザクションを T などで表記
-      １文字なら "主" とか "従" まど日本語でも記載可能
-     '/
 
     entity "顧客マスタ" as m_customers <m_customers> <<M,MASTER_MARK_COLOR>> {
         + customer_code [PK]
