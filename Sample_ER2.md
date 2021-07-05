@@ -14,10 +14,6 @@
 !define MASTER_MARK_COLOR AAFFAA
 !define TRANSACTION_MARK_COLOR FFAA00
 
-/'
-  デフォルトのスタイルを設定します。
-  この場合の指定は class です。entity ではエラーになります。
-'/
 skinparam class {
     BackgroundColor METAL
     BorderColor Black
@@ -56,7 +52,7 @@ package "ECサイト" as target_system {
         + detail_id [PK]
         --
         order_id [FK]
-        item_code
+        item_code [FK]
         price
         num
     }
