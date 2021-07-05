@@ -2,10 +2,6 @@
 @startuml
 
 
-/'
-  図の中で目立たせたいエンティティに着色するための
-  色の名前（定数）を定義します。
-'/
 !define MAIN_ENTITY #E2EFDA-C6E0B4
 !define MAIN_ENTITY_2 #FCE4D6-F8CBAD
 
