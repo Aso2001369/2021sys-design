@@ -24,7 +24,6 @@ package "オリジナルECサイト" as target_system {
         pass
         name
         address
-        tel
         mail
         del_flag
         reg_date
