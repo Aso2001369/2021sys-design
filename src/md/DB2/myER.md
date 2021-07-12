@@ -16,7 +16,7 @@ skinparam class {
 }
 
 
-package "ECサイト" as target_system {
+package "オリジナルECサイト" as target_system {
 
     entity "顧客マスタ" as m_customers <m_customers> <<M,MASTER_MARK_COLOR>> {
         + customer_code [PK]
