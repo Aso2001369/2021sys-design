@@ -32,7 +32,6 @@
 |パスワード|pass|varchar(50)|〇|〇|〇|
 |氏名|name|varchar(20)||〇||
 |住所|address|varchar(100)||〇||
-|電話番号|tel|varchar(20)||〇||
 |メールアドレス|mail|varchar(100)||〇||
 |削除フラグ|del_flag|int(11)||||
 |登録日|reg_date|date||〇||
