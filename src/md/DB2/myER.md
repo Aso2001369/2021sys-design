@@ -46,14 +46,7 @@ package "ECサイト" as target_system {
         price
         num
     }
-    
-    entity "カテゴリマスタ" as m_category <m_category> <<M,MASTER_MARK_COLOR>> {
-        + category_id [PK]
-        --
-        name
-        reg_date
-    }
-    
+
     entity "商品マスタ" as m_items <m_items> <<M,MASTER_MARK_COLOR>> {
         + item_code [PK]
         --
@@ -69,7 +62,6 @@ package "ECサイト" as target_system {
     m_customers |o-ri-o{ d_purchase
     d_purchase ||-ri-|{ d_purchase_detail
     d_purchase_detail }-do-|| m_items
-    m_category ||-ri-o{ m_items
     
 @enduml
 ```
