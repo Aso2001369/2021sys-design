@@ -52,7 +52,6 @@ package "ECサイト" as target_system {
         --
         item_name
         price
-        category_id [FK]
         image
         detail
         del_flag
