@@ -55,7 +55,7 @@
 |ラッピングコード|wrapping_code|int(11)|〇|〇||
 |ラッピング名|wrapping_name|varchar(50)||〇||
 |価格|price|int(11)||〇||
-|ラッピング名|image|varchar(200)||〇||
+|画像ファイル名|image|varchar(200)||〇||
 |メッセージカードの有無|messagecard_flag|boolean||〇||
 |削除フラグ|del_flag|int(11)||||
 |登録日|reg_date|date||〇||
