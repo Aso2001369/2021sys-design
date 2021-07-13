@@ -21,6 +21,7 @@
 |----|---------------|--------|----|----|----|
 |オーダー詳細ID|detail_id|bigint(20)|〇|〇||
 |オーダーID|order_id|bigint(20)|〇|〇|〇|
+|ラッピングコード|wrapping_code|int(11)|||〇|
 |商品コード|item_code|int(11)||〇||
 |価格|price|int(11)||〇||
 |数量|num|int(11)||〇||
@@ -56,5 +57,5 @@
 |価格|price|int(11)||〇||
 |ラッピング名|image|varchar(200)||〇||
 |メッセージカードの有無|messagecard_flag|boolean||〇||
-|削除フラグ|del_flag|int(11)||〇||
+|削除フラグ|del_flag|int(11)||||
 |登録日|reg_date|date||〇||
