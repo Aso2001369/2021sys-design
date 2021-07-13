@@ -54,7 +54,7 @@ package "オリジナルECサイト" as target_system {
         reg_date
     }
     
-    entity "ラッピングマスタ" as m_items <m_items> <<M,MASTER_MARK_COLOR>> {
+    entity "ラッピングマスタ" as m_wrapping <m_wrapping> <<M,MASTER_MARK_COLOR>> {
         + wrapping_code [PK]
         --
         wrapping_name
