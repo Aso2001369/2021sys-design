@@ -2,7 +2,7 @@
 @startuml
 
 
-!define METAL #F2F2F2-D9D9D9
+
 !define MASTER_MARK_COLOR AAFFAA
 !define TRANSACTION_MARK_COLOR FFAA00
 
@@ -44,6 +44,17 @@ package "オリジナルECサイト" as target_system {
     }
 
     entity "商品マスタ" as m_items <m_items> <<M,MASTER_MARK_COLOR>> {
+        + item_code [PK]
+        --
+        item_name
+        price
+        image
+        detail
+        del_flag
+        reg_date
+    }
+    
+    entity "ラッピングマスタ" as m_items <m_items> <<M,MASTER_MARK_COLOR>> {
         + item_code [PK]
         --
         item_name
