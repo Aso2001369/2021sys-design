@@ -45,7 +45,7 @@
 |商品名|item_name|varchar(50)||〇||
 |価格|price|int(11)||〇||
 |画像ファイル名|image|varchar(200)||〇||
-|商品詳細説明|detail|varchar(500)||||
+|商品詳細説明|detail|varchar(500)||〇||
 |削除フラグ|del_flag|int(11)||||
 |登録日|reg_date|date||〇||
 
