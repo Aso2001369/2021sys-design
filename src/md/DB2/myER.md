@@ -55,12 +55,12 @@ package "オリジナルECサイト" as target_system {
     }
     
     entity "ラッピングマスタ" as m_items <m_items> <<M,MASTER_MARK_COLOR>> {
-        + item_code [PK]
+        + wrapping_code [PK]
         --
-        item_name
+        wrapping_name
         price
         image
-        detail
+        messagecard_flag
         del_flag
         reg_date
     }
