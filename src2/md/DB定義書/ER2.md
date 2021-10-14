@@ -76,13 +76,13 @@ package "オリジナルECサイト" as target_system {
         --
     }
     
+    
+    d_customers |o----o{ d_purchase
+    d_purchase ||-ri-|{ d_purchase_detail
+    d_purchase_detail }-do-|| d_items
     d_items ----|{ d_category
     d_items ----|{ d_region
     d_items ----|{ d_favorite
-    d_customers |o-ri-o{ d_purchase
-    d_purchase ||-ri-|{ d_purchase_detail
-    d_purchase_detail }-do-|| d_items
-    
     d_customers ----|{ d_favorite
     
 @enduml
