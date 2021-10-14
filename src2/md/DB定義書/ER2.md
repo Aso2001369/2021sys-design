@@ -83,7 +83,7 @@ package "オリジナルECサイト" as target_system {
     d_items }o----|| d_category
     d_items }o----|| d_region
     d_favorite }o-do-|| d_customers
-    d_favorite }o-do-|| d_items
+    d_favorite }o-ri-|| d_items
     
 @enduml
 ```
