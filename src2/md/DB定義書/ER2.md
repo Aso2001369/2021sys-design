@@ -15,15 +15,16 @@ skinparam class {
 
 package "オリジナルECサイト" as target_system {
 
-    entity "顧客マスタ" as m_customers <m_customers> <<M,MASTER_MARK_COLOR>> {
+    entity "顧客テーブル" as d_customers <d_customers> <<M,MASTER_MARK_COLOR>> {
         + customer_id [PK]
         --
-        pass
         name
-        address
+        furigana
+        postal_code
+        address1
+        address2
         mail
-        del_flag
-        reg_date
+        pass
     }
     
     entity "購入テーブル" as d_purchase <d_purchase> <<T,TRANSACTION_MARK_COLOR>> {
@@ -38,9 +39,9 @@ package "オリジナルECサイト" as target_system {
         + purchase_id [PK]
         + detail_id [PK]
         --
-         item_id [FK]
-         price
          num
+         price
+         # item_id [FK]
     }
 
     entity "商品テーブル" as d_items <d_items> <<M,MASTER_MARK_COLOR>> {
@@ -61,10 +62,16 @@ package "オリジナルECサイト" as target_system {
         category_name
     }
     
-    entity "カテゴリーテーブル" as d_region <d_region> <<M,MASTER_MARK_COLOR>> {
+    entity "地域テーブル" as d_region <d_region> <<M,MASTER_MARK_COLOR>> {
         + region_id [PK]
         --
         region_name
+    }
+    
+    entity "お気に入りテーブル" as d_favorite <d_favorite> <<M,MASTER_MARK_COLOR>> {
+        + customer_id [PK]
+        + item_id [PK]
+        --
     }
     
     m_customers |o-ri-o{ d_purchase
