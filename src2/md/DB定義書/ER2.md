@@ -44,15 +44,16 @@ package "オリジナルECサイト" as target_system {
         num
     }
 
-    entity "商品マスタ" as m_items <m_items> <<M,MASTER_MARK_COLOR>> {
+    entity "商品テーブル" as d_items <d_items> <<M,MASTER_MARK_COLOR>> {
         + item_code [PK]
         --
         item_name
-        price
+        item_detail
         image
-        detail
-        del_flag
-        reg_date
+        price
+        gift_flag
+        # region_code [FK]
+        # category_code [FK]
     }
     
     entity "ラッピングマスタ" as m_wrapping <m_wrapping> <<M,MASTER_MARK_COLOR>> {
