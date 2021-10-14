@@ -80,8 +80,8 @@ package "オリジナルECサイト" as target_system {
     d_customers |o-up-o{ d_purchase
     d_purchase ||-ri-|{ d_purchase_detail
     d_purchase_detail }-do-|| d_items
-    d_items }o-up-|| d_category
-    d_items }o-up-|| d_region
+    d_items }o-do-|| d_category
+    d_items }o-do-|| d_region
     d_favorite }o-up-|| d_customers
     d_favorite }o-up-|| d_items
     
