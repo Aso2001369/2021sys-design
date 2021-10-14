@@ -13,7 +13,7 @@ skinparam class {
 }
 
 
-package "オリジナルECサイト" as target_system {
+package "特産品販売サイト" as target_system {
 
     entity "商品テーブル" as d_items <d_items> <<T,TRANSACTION_MARK_COLOR>> {
         + item_id [PK]
