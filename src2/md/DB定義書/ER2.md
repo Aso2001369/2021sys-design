@@ -15,7 +15,19 @@ skinparam class {
 
 package "オリジナルECサイト" as target_system {
 
-    entity "顧客テーブル" as d_customers <d_customers> <<M,MASTER_MARK_COLOR>> {
+    entity "商品テーブル" as d_items <d_items> <<T,TRANSACTION_MARK_COLOR>> {
+        + item_id [PK]
+        --
+        item_name
+        item_detail
+        image
+        price
+        gift_flag
+        # region_id [FK]
+        # category_id [FK]
+    }
+    
+    entity "顧客テーブル" as d_customers <d_customers> <<T,TRANSACTION_MARK_COLOR>> {
         + customer_id [PK]
         --
         name
@@ -44,17 +56,7 @@ package "オリジナルECサイト" as target_system {
          # item_id [FK]
     }
 
-    entity "商品テーブル" as d_items <d_items> <<T,TRANSACTION_MARK_COLOR>> {
-        + item_id [PK]
-        --
-        item_name
-        item_detail
-        image
-        price
-        gift_flag
-        # region_id [FK]
-        # category_id [FK]
-    }
+    
     
     entity "カテゴリーテーブル" as d_category <d_category> <<T,TRANSACTION_MARK_COLOR>> {
         + category_id [PK]
