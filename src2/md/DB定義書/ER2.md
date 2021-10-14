@@ -79,6 +79,9 @@ package "オリジナルECサイト" as target_system {
     d_purchase_detail }-do-|| d_items
     d_items ----|{ d_category
     d_items ----|{ d_region
+    d_customers ----|{ d_favorite
+    d_items ----|{ d_favorite
+    
     
 @enduml
 ```
