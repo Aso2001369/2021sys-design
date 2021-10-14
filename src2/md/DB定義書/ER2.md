@@ -16,7 +16,7 @@ skinparam class {
 package "オリジナルECサイト" as target_system {
 
     entity "顧客マスタ" as m_customers <m_customers> <<M,MASTER_MARK_COLOR>> {
-        + customer_code [PK]
+        + customer_id [PK]
         --
         pass
         name
@@ -27,44 +27,44 @@ package "オリジナルECサイト" as target_system {
     }
     
     entity "購入テーブル" as d_purchase <d_purchase> <<T,TRANSACTION_MARK_COLOR>> {
-        + order_id [PK]
+        + purchase_id [PK]
         --
-        customer_code
         purchase_date
         total_price
+        # customer_id [FK]
     }
     
      entity "購入詳細テーブル" as d_purchase_detail <d_purchase_detail> <<T,TRANSACTION_MARK_COLOR>> {
-        + order_id [PK]
+        + purchase_id [PK]
         + detail_id [PK]
         --
-         item_code [FK]
-         wrapping_code [FK]
-        price
-        num
+         item_id [FK]
+         price
+         num
     }
 
     entity "商品テーブル" as d_items <d_items> <<M,MASTER_MARK_COLOR>> {
-        + item_code [PK]
+        + item_id [PK]
         --
         item_name
         item_detail
         image
         price
         gift_flag
-        # region_code [FK]
-        # category_code [FK]
+        # region_id [FK]
+        # category_id [FK]
     }
     
-    entity "ラッピングマスタ" as m_wrapping <m_wrapping> <<M,MASTER_MARK_COLOR>> {
-        + wrapping_code [PK]
+    entity "カテゴリーテーブル" as d_category <d_category> <<M,MASTER_MARK_COLOR>> {
+        + category_id [PK]
         --
-        wrapping_name
-        price
-        image
-        messagecard_flag
-        del_flag
-        reg_date
+        category_name
+    }
+    
+    entity "カテゴリーテーブル" as d_region <d_region> <<M,MASTER_MARK_COLOR>> {
+        + region_id [PK]
+        --
+        region_name
     }
     
     m_customers |o-ri-o{ d_purchase
