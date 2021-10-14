@@ -44,7 +44,7 @@ package "オリジナルECサイト" as target_system {
          # item_id [FK]
     }
 
-    entity "商品テーブル" as d_items <d_items> <<M,MASTER_MARK_COLOR>> {
+    entity "商品テーブル" as d_items <d_items> <<T,TRANSACTION_MARK_COLOR>> {
         + item_id [PK]
         --
         item_name
@@ -56,19 +56,19 @@ package "オリジナルECサイト" as target_system {
         # category_id [FK]
     }
     
-    entity "カテゴリーテーブル" as d_category <d_category> <<M,MASTER_MARK_COLOR>> {
+    entity "カテゴリーテーブル" as d_category <d_category> <<T,TRANSACTION_MARK_COLOR>> {
         + category_id [PK]
         --
         category_name
     }
     
-    entity "地域テーブル" as d_region <d_region> <<M,MASTER_MARK_COLOR>> {
+    entity "地域テーブル" as d_region <d_region> <<T,TRANSACTION_MARK_COLOR>> {
         + region_id [PK]
         --
         region_name
     }
     
-    entity "お気に入りテーブル" as d_favorite <d_favorite> <<M,MASTER_MARK_COLOR>> {
+    entity "お気に入りテーブル" as d_favorite <d_favorite> <<T,TRANSACTION_MARK_COLOR>> {
         + customer_id [PK]
         + item_id [PK]
         --
