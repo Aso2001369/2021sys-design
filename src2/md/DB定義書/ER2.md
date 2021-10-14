@@ -74,7 +74,7 @@ package "オリジナルECサイト" as target_system {
         --
     }
     
-    m_customers |o-ri-o{ d_purchase
+    d_customers |o-ri-o{ d_purchase
     d_purchase ||-ri-|{ d_purchase_detail
     d_purchase_detail }-do-|| d_items
     d_purchase_detail }o--o| m_wrapping
