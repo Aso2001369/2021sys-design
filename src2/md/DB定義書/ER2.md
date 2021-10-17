@@ -55,35 +55,21 @@ package "特産品販売サイト" as target_system {
          price
          # item_id [FK]
     }
-
-    
-    
-    entity "カテゴリーテーブル" as d_category <d_category> <<T,TRANSACTION_MARK_COLOR>> {
-        + category_id [PK]
-        --
-        category_name
-    }
-    
+  
     entity "地域テーブル" as d_region <d_region> <<T,TRANSACTION_MARK_COLOR>> {
         + region_id [PK]
         --
         region_name
     }
     
-    entity "お気に入りテーブル" as d_favorite <d_favorite> <<T,TRANSACTION_MARK_COLOR>> {
-        + customer_id [PK]
-        + item_id [PK]
-        --
-    }
+
     
     
     d_customers |o-up-o{ d_purchase
     d_purchase ||-ri-|{ d_purchase_detail
     d_purchase_detail }-do-|| d_items
-    d_items }o-do-|| d_category
     d_items }o-do-|| d_region
-    d_favorite }o-up-|| d_customers
-    d_favorite }o-up-|| d_items
+
     
 @enduml
 ```
