@@ -24,7 +24,6 @@ package "特産品販売サイト" as target_system {
         price
         gift_flag
         # region_id [FK]
-        # category_id [FK]
     }
     
     entity "顧客テーブル" as d_customers <d_customers> <<T,TRANSACTION_MARK_COLOR>> {
