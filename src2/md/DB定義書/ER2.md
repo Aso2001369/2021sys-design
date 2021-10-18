@@ -15,7 +15,7 @@ skinparam class {
 
 package "特産品販売サイト" as target_system {
 
-    entity "商品テーブル" as d_items <d_items> <<T,TRANSACTION_MARK_COLOR>> {
+    entity "商品テーブル" as m_items <m_items> <<M,MASTER_MARK_COLOR>> {
         + item_id [PK]
         --
         item_name
@@ -26,7 +26,7 @@ package "特産品販売サイト" as target_system {
         # region_id [FK]
     }
     
-    entity "顧客テーブル" as d_customers <d_customers> <<T,TRANSACTION_MARK_COLOR>> {
+    entity "顧客テーブル" as m_customers <m_customers> <<M,MASTER_MARK_COLOR>> {
         + customer_id [PK]
         --
         name
@@ -64,10 +64,10 @@ package "特産品販売サイト" as target_system {
 
     
     
-    d_customers |o-up-o{ d_purchase
+    m_customers |o-up-o{ d_purchase
     d_purchase ||-ri-|{ d_purchase_detail
-    d_purchase_detail }-do-|| d_items
-    d_items }o-do-|| d_region
+    d_purchase_detail }-do-|| m_items
+    m_items }o-do-|| d_region
 
     
 @enduml
