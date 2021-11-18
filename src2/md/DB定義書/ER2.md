@@ -41,8 +41,6 @@ package "特産品販売サイト" as target_system {
     entity "購入テーブル" as d_purchase <d_purchase> <<T,TRANSACTION_MARK_COLOR>> {
         + purchase_id [PK]
         --
-        purchase_date
-        total_price
         # customer_id [FK]
     }
     
