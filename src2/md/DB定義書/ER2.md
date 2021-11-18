@@ -46,11 +46,9 @@ package "特産品販売サイト" as target_system {
     
      entity "購入詳細テーブル" as d_purchase_detail <d_purchase_detail> <<T,TRANSACTION_MARK_COLOR>> {
         + purchase_id [PK]
-        + detail_id [PK]
+        + item_id [PK]
         --
-         num
-         price
-         # item_id [FK]
+         count
     }
   
     entity "地域テーブル" as d_region <d_region> <<T,TRANSACTION_MARK_COLOR>> {
