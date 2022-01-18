@@ -36,11 +36,13 @@ package "特産品販売サイト" as target_system {
         address2
         mail
         pass
+        delete_flag
     }
     
     entity "購入テーブル" as d_purchase <d_purchase> <<T,TRANSACTION_MARK_COLOR>> {
         + purchase_id [PK]
         --
+        purchase_date
         # customer_id [FK]
     }
     
@@ -49,6 +51,7 @@ package "特産品販売サイト" as target_system {
         + item_id [PK]
         --
          count
+         market_price
     }
   
     entity "地域テーブル" as d_region <d_region> <<T,TRANSACTION_MARK_COLOR>> {
